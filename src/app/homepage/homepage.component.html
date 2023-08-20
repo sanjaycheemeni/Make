@@ -1,0 +1,93 @@
+    <div class="main">
+
+        <nav>
+            <img src="assets/images/logo.png" class="logo" alt="">
+            <h5>MAK<p>EAT</p>ABLE</h5>
+            <ul>
+                <li>About Us</li>
+                <li>Profile</li>
+                <li class="logout" onclick="openPopup()">Sign in</li>
+            </ul>
+        </nav>
+
+
+        <div class="content">
+            <p class="wel-msg">👋 Hey, <b>Get your food!</b></p>
+            <div class="search">
+
+                <h6 class="dd">Search </h6>
+                <img class="search-icon" src="assets/images/search.png" alt="/">
+                <!-- <img src="assets/images/chevron-right.png" alt="/"> -->
+            </div>
+        </div>
+
+
+
+
+        <!-- Top Rated Section -->
+        <h4 class="title">Top rated</h4>
+        <div class="top-rate">
+
+            <div *ngFor="let top_food of top_foods" class="card">
+                <div class="box">
+                    <img class="star" src="assets/images/star.png" alt="">
+                    {{top_food.rating}}
+                </div>
+                <img src="{{top_food.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{top_food.name}}</h5>
+                    <p class="card-text">{{top_food.hotel}}</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Top Restaurants section -->
+        <h4 class="title">Top Restaurants</h4>
+
+
+        <div class="top-resto">
+            
+
+            <div *ngFor="let hotel of hotels" class="card top-res ">
+                <div class="card-body">
+                    <h5 class="card-title">{{hotel.name}}</h5>
+                    <h6 class="">{{hotel.location}}</h6>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Top Restaurants section -->
+        <h4 class="title">catagories</h4>
+        <div class="cat">
+
+
+            <div *ngFor="let cat of catagories" class="card bg-dark text-white">
+                <img src="{{cat.image}}" class="card-img" alt="..." height="180px" width="100px">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">{{cat.name}}</h5>
+                </div>
+            </div>
+
+            
+            
+
+        </div>
+        <div class="man">
+            <h6>Sign in to explore more!</h6>
+        </div>
+
+
+    </div>
+    <div class="login-div" id="popup">
+        <div class="close-btn" onclick="closePopup()">
+            <h6>close</h6>
+        </div>
+    </div>

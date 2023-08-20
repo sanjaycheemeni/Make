@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'makeatable';
+  hotels:any[] = [
+    {
+      "name" : "Paragon Hotel",
+      "location": "Palazhi, Calicut"
+
+    },
+    {
+      "name" : "Paragon Hotel",
+      "location": "Palazhi, Calicut"
+
+    },
+    {
+      "name" : "Paragon Hotel",
+      "location": "Palazhi, Calicut"
+
+    }
+  ]
 }
